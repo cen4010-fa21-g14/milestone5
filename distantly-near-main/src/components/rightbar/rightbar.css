@@ -63,7 +63,7 @@
   }
   
   .rightbarFollowings{
-    display: flex;
+    display: table-row-group;
     flex-wrap: wrap;
     justify-content: space-between;
   }
