@@ -36,9 +36,7 @@
     margin:20px;
 }
 .shareBottom{
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .shareOptions{
@@ -63,14 +61,14 @@
     font-weight: 500px;
 }
 .shareButton{
-    border:none;
-    padding:7px;
-    border-radius: 5px;
-    background-color: green;
-    font-weight: 500;
-    margin-right:20px;
-    cursor: pointer;
-    color:white;
+    height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #C3A29E;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
 }
 
 .shareImgContainer{
