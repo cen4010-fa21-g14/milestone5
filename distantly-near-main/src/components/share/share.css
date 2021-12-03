@@ -70,7 +70,7 @@
       font-size: 20px;
       font-weight: 500;
       cursor: pointer;
-      width: 250px;
+      width: -webkit-fill-available;
     max-width: 100%;
     padding: 15px;
 

@@ -15,6 +15,13 @@
     color:white;
     cursor: pointer;
 }
+.logo{
+    font-size: 18px;
+    margin-left: 14px;
+    font-weight: bold;
+    color:white;
+    cursor: pointer;
+}
 .topbarLeft{
     flex:3;
  
