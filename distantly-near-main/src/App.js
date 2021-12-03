@@ -33,7 +33,7 @@ function App() {
           {user ? <Redirect to="/"/> : <Register />}
         </Route>
         <Route path="/search">
-          {user ? <Redirect to="/"/> : <Search />}
+          <Search/>
         </Route>
         <Route path="/profile/:username">
           <Profile/>
