@@ -1,0 +1,120 @@
+import "./search.css";
+import React from 'react';
+import { useState, useEffect } from "react";
+import axios from "axios";
+// import {Users} from "../../dummyData"
+import Topbar from "../../components/topbar/Topbar";
+import { Link } from "react-router-dom";
+
+
+
+
+export default function Search({}) {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const [ searchTerm, setSearchTerm ] = useState('');
+    const [ users, setUsers] = useState([]);
+
+
+
+    useEffect(()=>{
+        const fetchUsers = async () =>{
+            const res = await axios.get("users/");
+            setUsers(res.data);
+        }
+        fetchUsers();
+
+    },[]);
+
+
+    // useEffect(() => {
+    //     const getFriends = async () => {
+    //       try {
+    //         const friendList = await axios.get("/users/friends/61a99d6b299eab048ed4a549");
+    //         setUsers(friendList.data);
+    //       } catch (err) {
+    //         console.log(err);
+    //       }
+    //     };
+    //     getFriends();
+    //   }, [user]);
+
+
+
+
+    return (
+        <>
+        <Topbar/>
+        
+        <div className="Search">
+            <input type="text" placeholder="Search for users..." 
+            onChange={event => {
+                setSearchTerm(event.target.value)
+                }}/>
+                
+
+
+            {/* {users.map((individual) => (
+                <Link to={"/profile/" + individual.username}
+                style={{ textDecoration: "none"}}
+                >
+                    <div>
+                        <img src={individual.profilePicture
+                        ? PF + individual.profilePicture
+                        : PF + "person/noAvatar.png"
+                    }
+                    alt=""
+                    />
+                    <span>{individual.username}</span>
+ 
+                    </div>
+                </Link>
+            ))} */}
+
+
+            <div className="data">
+
+            {users.filter((val)=>{
+                if(searchTerm == ""){
+                    return null
+                }else if(val.username.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return val
+                }
+            }).map((val,key)=>{
+                return (
+                <div className="user" key={key}>
+                    <Link
+                        to={"/profile/" + val.username}
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
+                    <div className="rightbarFollowing">
+                    <img
+                    src={
+                        val.profilePicture
+                        ? PF + val.profilePicture
+                        : PF + "person/noAvatar.png"
+                    }
+                    alt=""
+                    className="rightbarFollowingImg"
+                    />
+                    <span className="rightbarFollowingName">{val.username}</span>
+                    </div>
+                    </Link>
+
+
+                    {/* <p>{val.username}</p> */}
+                    {/* <img  alt="" src={val.profilePicture} ></img> */}
+
+
+                    
+                </div>
+                );
+                
+            })}
+            </div>
+            {/* <p>Hello World</p> */}
+
+        </div>
+        
+        </>
+    )
+}

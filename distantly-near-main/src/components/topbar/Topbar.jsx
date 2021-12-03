@@ -24,8 +24,9 @@ export default function Topbar() {
                 
             </div>
             <div className="topbarRight">
-                {/* <span className="topbarLink">Search</span> */}
-                {/* <span className="topbarLink">Timeline</span> */}
+                <Link to="/search" style={{textDecoration:"none", color:"white"}}>
+                    <span>Search</span>
+                </Link>
                 <span className="topbarLink" onClick={handleLogout}>{user && "LOGOUT"}</span>
             </div>
             <div className="topbarIcons">

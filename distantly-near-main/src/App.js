@@ -2,6 +2,7 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
+import Search from "./pages/search/Search";
 
 // import MenuIcon from '@mui/icons-material/Menu';
 // import {Person, Agriculture } from '@mui/icons-material';
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/register">
           {user ? <Redirect to="/"/> : <Register />}
+        </Route>
+        <Route path="/search">
+          {user ? <Redirect to="/"/> : <Search />}
         </Route>
         <Route path="/profile/:username">
           <Profile/>
