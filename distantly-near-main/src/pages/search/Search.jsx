@@ -1,7 +1,7 @@
 import "./search.css";
 import React from 'react';
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { axiosInstance } from "../../config";
 // import {Users} from "../../dummyData"
 import Topbar from "../../components/topbar/Topbar";
 import { Link } from "react-router-dom";
@@ -18,7 +18,7 @@ export default function Search({}) {
 
     useEffect(()=>{
         const fetchUsers = async () =>{
-            const res = await axios.get("users/");
+            const res = await axiosInstance.get("users/userList");
             setUsers(res.data);
         }
         fetchUsers();
@@ -26,21 +26,10 @@ export default function Search({}) {
     },[]);
 
 
-    // useEffect(() => {
-    //     const getFriends = async () => {
-    //       try {
-    //         const friendList = await axios.get("/users/friends/61a99d6b299eab048ed4a549");
-    //         setUsers(friendList.data);
-    //       } catch (err) {
-    //         console.log(err);
-    //       }
-    //     };
-    //     getFriends();
-    //   }, [user]);
 
 
 
-
+  
     return (
         <>
         <Topbar/>
@@ -50,7 +39,7 @@ export default function Search({}) {
             onChange={event => {
                 setSearchTerm(event.target.value)
                 }}/>
-                
+            
 
 
             {/* {users.map((individual) => (
