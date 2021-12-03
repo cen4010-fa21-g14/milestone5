@@ -37,11 +37,11 @@ export default function Profile() {
                     </div>
                     
                     <div className="profileInfo">
-                    <Link to="/Settings" style={{textDecoration:"none"}}>
+                    {/* <Link to="/Settings" style={{textDecoration:"none"}}>
                         <button className="button" >
                             Settings
                         </button>
-                     </Link>
+                     </Link> */}
                         <h4 className="profileInfoName">{user.usermame}</h4>
                         <span className="profileInfoDesc">{user.desc}</span>
                     </div>

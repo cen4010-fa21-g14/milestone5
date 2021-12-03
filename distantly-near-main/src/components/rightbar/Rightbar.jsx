@@ -69,6 +69,15 @@ export default function Rightbar({ user }) {
   const ProfileRightbar = () => {
     return (
       <>
+  {user.username == currentUser.username && (
+                            <Link to="/settings" style={{textDecoration:"none"}}>
+
+                            <button className="button" >
+                                Settings
+                              </button>
+                            </Link>
+        )}
+
         {user.username !== currentUser.username && (
         <button className="rightbarFollowingButton" onClick={handleClick}>
           {followed ? "Unfollow" : "Follow"}
