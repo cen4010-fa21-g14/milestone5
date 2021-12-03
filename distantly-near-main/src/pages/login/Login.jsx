@@ -22,7 +22,7 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Distantly Near</h3>
+          <h3 className="loginLogo">Distantly-Near</h3>
           <span className="loginDesc">
             Closer than you think!
           </span>
