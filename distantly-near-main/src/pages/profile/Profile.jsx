@@ -32,7 +32,13 @@ export default function Profile() {
                     <div className="profileCover">
                         <img className="profileCoverImg" src={user.coverPicture ? PF+user.coverPicture  : PF+"person/noCover.png"} alt=""></img>
                         <img className="profileUserImg" src={user.profilePicture ? PF+user.profilePicture : PF+"person/noAvatar.png"}alt=""></img>
+                        
                     </div>
+                    <Link to="/Settings" style={{textDecoration:"none"}}>
+                        <button className="button" >
+                            Settings
+                        </button>
+                     </Link>
                     <div className="profileInfo">
                         <h4 className="profileInfoName">{user.usermame}</h4>
                         <span className="profileInfoDesc">{user.desc}</span>
