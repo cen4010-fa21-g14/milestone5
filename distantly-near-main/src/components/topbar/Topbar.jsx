@@ -27,7 +27,7 @@ export default function Topbar() {
                 </div>
             </div>
             <div className="topbarRight">
-                <span className="topbarLink">Search</span>
+                {/* <span className="topbarLink">Search</span> */}
                 {/* <span className="topbarLink">Timeline</span> */}
                 <span className="topbarLink" onClick={handleLogout}>{user && "LOGOUT"}</span>
             </div>
