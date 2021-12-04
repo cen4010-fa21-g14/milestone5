@@ -49,10 +49,10 @@ export default function Share() {
             <Cancel className="shareCancelImg" onClick={() => setFile(null)} />
           </div>
         )} */}
-            <div className="shareBottom" onSubmit={submitHandler}>
+            <form className="shareBottom" onSubmit={submitHandler}>
                 
                 <button className="shareButton" type="submit">Share</button>
-            </div>
+            </form>
         </div>
     )
 }
