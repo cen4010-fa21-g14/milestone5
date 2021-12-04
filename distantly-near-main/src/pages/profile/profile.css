@@ -51,3 +51,10 @@
     width: -webkit-fill-available;
 }
 
+.leftColumnTest{
+    flex: 3
+}
+
+.rightColumnTest{
+    flex: 4
+}
