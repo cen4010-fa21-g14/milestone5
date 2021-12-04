@@ -74,7 +74,7 @@ export default function Rightbar({ user }) {
           <div className="rightbarFriendList">
           {friends.map(() => (
             <div>
-              <span>{friend.username}</span>
+              <span>{friends.username}</span>
               
 
             </div>
