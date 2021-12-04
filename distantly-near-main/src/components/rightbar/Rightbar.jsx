@@ -15,6 +15,18 @@ export default function Rightbar({ user }) {
   const [followed, setFollowed] = useState(
     currentUser.followings.includes(user?.id)
   );
+  const [ users, setUsers] = useState([]);
+
+
+
+    useEffect(()=>{
+        const fetchUsers = async () =>{
+            const res = await axiosInstance.get("users/userList");
+            setUsers(res.data);
+        }
+        fetchUsers();
+
+    },[]);
 
   useEffect(() => {
     const getFriends = async () => {
@@ -49,10 +61,8 @@ export default function Rightbar({ user }) {
   const HomeRightbar = () => {
     return (
       <>
-      
-        <h4 className="rightbarTitle">Online Friends</h4>
         
-        <div className="rightbarFriendList">
+        {/* <div className="rightbarFriendList">
           {friends.map((friend) => (
             <div>
               <span>{friend.username}</span>
@@ -60,7 +70,18 @@ export default function Rightbar({ user }) {
 
             </div>
           ))}
+        </div> */}
+          <div className="rightbarFriendList">
+          {friends.map(() => (
+            <div>
+              <span>{friend.username}</span>
+              
+
+            </div>
+          ))}
         </div>
+        
+         
       </>
     );
   };
