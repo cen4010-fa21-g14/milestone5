@@ -46,10 +46,13 @@ export default function Profile() {
                         <span className="profileInfoDesc">{user.desc}</span>
                     </div>
                 </div>
-                <div className="profileRightBottom">
+                <div className="profileFeed">
+                    <Feed/>
+                </div>
+                {/* <div className="profileRightBottom">
                     <Feed username={username}/>
                     <Rightbar user={user}/>
-                </div>
+                </div> */}
             </div>
         </div>
         </>

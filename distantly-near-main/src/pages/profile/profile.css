@@ -48,5 +48,6 @@
 
 .profileRightBottom{
     display: flex;
+    width: -webkit-fill-available;
 }
 
