@@ -51,32 +51,12 @@ export default function Rightbar({ user }) {
       <>
       
         <h4 className="rightbarTitle">Online Friends</h4>
-        <div>
-        {friends.map((friend) => (
-            <Link
-              to={"/profile/" + friend.username}
-              style={{ textDecoration: "none" }}
-            >
-              <div className="">
-                <img
-                  src={
-                    friend.profilePicture
-                      ? PF + friend.profilePicture
-                      : PF + "person/noAvatar.png"
-                  }
-                  alt=""
-                  className=""
-                />
-                <span className="">{friend.username}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-        {/* <ul className="rightbarFriendList">
-          {Users.map((u) => (
+        
+        <ul className="rightbarFriendList">
+          {friends.map((u) => (
             <Online key={u.id} user={u} />
           ))}
-        </ul> */}
+        </ul>
       </>
     );
   };
