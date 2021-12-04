@@ -27,7 +27,7 @@ export default function Topbar() {
                 <Link to="/search" style={{textDecoration:"none", color:"white"}}>
                     <span className="logo2">Search</span>
                 </Link>
-                <span className="logo2" onClick={handleLogout}>{user && "LOGOUT"}</span>
+                <span className="logo2" onClick={handleLogout}>{user}Log Out</span>
             </div>
             
         <Link to={`/profile/${user.username}`}>
