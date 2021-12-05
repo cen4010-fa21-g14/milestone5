@@ -20,7 +20,7 @@ export default function Settings() {
 
     
     const userId = useParams().userId;
-
+    const [ userId, setUser] = useState({});
     useEffect(() =>{
         const fetchUser = async () =>{
             const res = await axiosInstance.get(`/users?userId=${userId}`);
@@ -68,7 +68,7 @@ export default function Settings() {
             <div className="">
                 
                 <div className="">
-                    <form className="SettingsBox" onSubmit={handleClick}>
+                    <form className="SettingsBox" >
                         <input placeholder="First Name"  ref={firstName} className="" />
                         <input placeholder="Last Name"  ref={lastName} className=""/>
                         <input placeholder="City"  ref={city} className=""/>
