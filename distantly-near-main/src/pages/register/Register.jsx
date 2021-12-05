@@ -11,6 +11,8 @@ export default function Register() {
     const password = useRef();
     const passwordAgain = useRef();
     const history = useHistory();
+    const firstName = useRef();
+    const lastName = useRef();
 
     const handleClick = async (e) => {
         e.preventDefault();
@@ -21,6 +23,8 @@ export default function Register() {
                 username: username.current.value,
                 email: email.current.value,
                 password: password.current.value,
+                firstName: firstName.current.value,
+                lastName: lastName.current.value
                 
             }
             try{
@@ -43,6 +47,8 @@ export default function Register() {
                 <div className="loginRight">
                     <form className="loginBox" onSubmit={handleClick}>
                         <input placeholder="Username" required ref={username} className="loginInput" />
+                        <input placeholder="First Name" required ref={firstName} className="loginInput" />
+                        <input placeholder="Last Name" required ref={lastName} className="loginInput" />
                         <input placeholder="Email" required ref={email} className="loginInput" type="email"/>
                         <input placeholder="Password" required ref={password} className="loginInput" type="password" minLength="6"/>
                         <input placeholder="Password Again" required ref={passwordAgain} className="loginInput" type="password"/>
