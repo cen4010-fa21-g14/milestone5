@@ -13,6 +13,8 @@ export default function Register() {
     const history = useHistory();
     const firstName = useRef();
     const lastName = useRef();
+    const city = useRef();
+    const from = useRef();
 
     const handleClick = async (e) => {
         e.preventDefault();
@@ -24,7 +26,9 @@ export default function Register() {
                 email: email.current.value,
                 password: password.current.value,
                 firstName: firstName.current.value,
-                lastName: lastName.current.value
+                lastName: lastName.current.value,
+                city: city.current.value,
+                from: from.current.value
                 
             }
             try{
@@ -49,6 +53,8 @@ export default function Register() {
                         <input placeholder="Username" required ref={username} className="loginInput" />
                         <input placeholder="First Name" required ref={firstName} className="loginInput" />
                         <input placeholder="Last Name" required ref={lastName} className="loginInput" />
+                        <input placeholder="City" required ref={city} className="loginInput" />
+                        <input placeholder="State" required ref={from} className="loginInput" />
                         <input placeholder="Email" required ref={email} className="loginInput" type="email"/>
                         <input placeholder="Password" required ref={password} className="loginInput" type="password" minLength="6"/>
                         <input placeholder="Password Again" required ref={passwordAgain} className="loginInput" type="password"/>
