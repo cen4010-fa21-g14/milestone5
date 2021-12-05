@@ -41,6 +41,7 @@ export default function Settings() {
             password.current.setCustomValidity("Passwords do not match!  ")
         } else{
             const user = {
+                userId: userIdtag,
                 username: username.current.value,
                 email: email.current.value,
                 password: password.current.value,
@@ -51,7 +52,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put("/users/"+ userId,user);
+                await axiosInstance.put("/users/"+ userId);
                 history.push("/login")
             }catch(err){
                 console.log(err)
