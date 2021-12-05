@@ -20,13 +20,13 @@ export default function Settings() {
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users/${userId}`);
+            const res = await axiosInstance.get(`/users/${user1}`);
             setUser(res.data);
 
         }
         fetchUser();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[userId]);
+    },[user1]);
 
     const handleClick = async (e) => {
         e.preventDefault();
