@@ -11,7 +11,7 @@ import { useParams } from "react-router";
 
 export default function Settings() {
     const userId = useRef();
-    const username = useRef();
+
     const email = useRef();
     const password = useRef();
     const passwordAgain = useRef();
@@ -40,7 +40,6 @@ export default function Settings() {
         } else{
             const userItems = {
                 userId: userParams,
-                username: username.current.value,
                 email: email.current.value,
                 password: password.current.value,
                 city: city.current.value,
@@ -51,7 +50,7 @@ export default function Settings() {
             }
             try{
                 await axiosInstance.put("/users/" + userParams, userItems);
-                history.push("/profile/" + userParams)
+                history.push("/")
             }catch(err){
                 console.log(err)
             }
@@ -67,9 +66,9 @@ export default function Settings() {
             </div>
             <div className="settings">
 
-            <div className="">
+            <div className="settingsWrapper">
                 
-                <div className="">
+                <div className="settingsRight">
                     <form className="SettingsBox" onSubmit={handleClick}>
                         {/* <input placeholder="User Id"  required ref={userId} className="" /> */}
                         <input placeholder="First Name"  required ref={firstName} className="" />
