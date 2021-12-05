@@ -7,7 +7,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useParams } from "react-router";
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
-export default function Settings({ userTest1 }) {
+export default function Settings({ user }) {
     const username = useRef();
     const email = useRef();
     const password = useRef();
@@ -41,17 +41,17 @@ export default function Settings({ userTest1 }) {
     //     }
     //     fetchUser();
     // },[usernameTest]);
-    const [ userTest1, setUser] = useState({});
-    const usernameTest = useParams().username;
+    const [ user, setUser] = useState({});
+    // const usernameTest = useParams().username;
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?userId=${userTest1._id}`);
+            const res = await axiosInstance.get(`/users?userId=${user._id}`);
             setUser(res.data);
 
         }
         fetchUser();
-    },[usernameTest]);
+    },[user]);
 
 
     const handleClick = async (e) => {
@@ -70,7 +70,7 @@ export default function Settings({ userTest1 }) {
                 
             }
             try{
-                await axiosInstance.put("/users/" +usernameTest);
+                await axiosInstance.put(`/users/${user._id}`);
                 history.push("/login")
             }catch(err){
                 console.log(err)
