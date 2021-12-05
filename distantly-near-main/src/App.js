@@ -3,7 +3,7 @@ import Profile from "./pages/profile/Profile";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Search from "./pages/search/Search";
-
+import Settings from "./pages/settings/Settings";
 // import MenuIcon from '@mui/icons-material/Menu';
 // import {Person, Agriculture } from '@mui/icons-material';
 
@@ -34,6 +34,9 @@ function App() {
         </Route>
         <Route path="/search">
           <Search/>
+        </Route>
+        <Route path="/settings">
+          <Settings/>
         </Route>
         <Route path="/profile/:username">
           <Profile/>
