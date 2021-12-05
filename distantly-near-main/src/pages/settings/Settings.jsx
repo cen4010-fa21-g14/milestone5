@@ -2,11 +2,12 @@ import React from 'react'
 import { useRef } from "react";
 import { axiosInstance } from "../../config";
 import { useHistory } from "react-router"
-import { useEffect,useState } from "react"
+import { useEffect,useState,useContext } from "react"
+import { AuthContext } from "../../context/AuthContext";
 import { useParams } from "react-router";
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
-export default function Settings({ user }) {
+export default function Settings({ userTest1 }) {
     const username = useRef();
     const email = useRef();
     const password = useRef();
@@ -16,6 +17,8 @@ export default function Settings({ user }) {
     const firstName = useRef();
     const lastName = useRef();
     const history = useHistory();
+
+    const { userTest1: currentUser, dispatch } = useContext(AuthContext);
 
     // const [ user1, setUser] = useState({});
 
@@ -43,7 +46,7 @@ export default function Settings({ user }) {
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?_id=${usernameTest}`);
+            const res = await axiosInstance.get(`/users?_id=${userTest1._id}`);
             setUser(res.data);
 
         }
