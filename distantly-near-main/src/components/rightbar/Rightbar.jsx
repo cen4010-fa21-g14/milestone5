@@ -72,8 +72,8 @@ export default function Rightbar({ user }) {
           ))}
         </div> */}
           <div className="rightbarFriendList">
-          <span>Recommended Friends:</span>
-          <span>Recently Active Friends:</span>
+          <h4 className="rightbarTitle">Recommended Friends:</h4>
+          <h4 className="rightbarTitle">Recently Active Friends:</h4>
           
         </div>
         
