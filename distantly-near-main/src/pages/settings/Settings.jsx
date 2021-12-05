@@ -28,7 +28,7 @@ export default function Settings() {
 
         }
         fetchUser();
-    },[userIdtag]);
+    });
 
     
 
@@ -48,7 +48,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put(`/${userIdtag}`);
+                await axiosInstance.put(`/users/${userIdtag}`);
                 history.push("/login")
             }catch(err){
                 console.log(err)
