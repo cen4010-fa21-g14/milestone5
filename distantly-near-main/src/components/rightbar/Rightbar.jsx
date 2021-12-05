@@ -74,7 +74,7 @@ export default function Rightbar({ user }) {
           <div className="rightbarFriendList">
           <h4 className="rightbarTitle">Recommended Friends:</h4>
           {users.map((val,key)=>{
-            if(currentUser == val.username){
+            if(currentUser.username == val.username){
               break
             }
                 return (
