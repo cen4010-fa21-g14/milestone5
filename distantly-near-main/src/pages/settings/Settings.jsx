@@ -32,29 +32,29 @@ export default function Settings() {
 
     console.log(userIdtag)
 
-    // const handleClick = async (e) => {
-    //     e.preventDefault();
-    //     if(passwordAgain.current.value !== password.current.value){
-    //         password.current.setCustomValidity("Passwords do not match!  ")
-    //     } else{
-    //         const user = {
-    //             username: username.current.value,
-    //             email: email.current.value,
-    //             password: password.current.value,
-    //             city: city.current.value,
-    //             from: from.current.value,
-    //             firstName: firstName.current.value,
-    //             lastName: lastName.current.value,
+    const handleClick = async (e) => {
+        e.preventDefault();
+        if(passwordAgain.current.value !== password.current.value){
+            password.current.setCustomValidity("Passwords do not match!  ")
+        } else{
+            const user = {
+                username: username.current.value,
+                email: email.current.value,
+                password: password.current.value,
+                city: city.current.value,
+                from: from.current.value,
+                firstName: firstName.current.value,
+                lastName: lastName.current.value,
                 
-    //         }
-    //         try{
-    //             await axiosInstance.put(`/users/${userTest._id}`);
-    //             history.push("/login")
-    //         }catch(err){
-    //             console.log(err)
-    //         }
-    //     }
-    //   };
+            }
+            try{
+                await axiosInstance.put(`/users/${userIdtag}`);
+                history.push("/login")
+            }catch(err){
+                console.log(err)
+            }
+        }
+      };
     
     return (
         <div>
