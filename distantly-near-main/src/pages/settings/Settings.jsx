@@ -41,7 +41,7 @@ export default function Settings({ userTest1 }) {
     //     }
     //     fetchUser();
     // },[usernameTest]);
-    const [ userTest, setUser] = useState({});
+    const [ userTest1, setUser] = useState({});
     const usernameTest = useParams().username;
 
     useEffect(() =>{
