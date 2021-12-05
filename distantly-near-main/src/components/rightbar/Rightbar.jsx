@@ -73,7 +73,7 @@ export default function Rightbar({ user }) {
         </div> */}
           <div className="rightbarFriendList">
           <h4 className="rightbarTitle">Recommended Friends :</h4>
-          {users.this.props.data.slice(0, 5).map((val,key)=>{
+          {users.filter((val,index)=> index < 5).map((val,key)=>{
             
                 return (
                 <div className="user" key={key}>
