@@ -87,8 +87,7 @@ export default function Settings() {
             <div className="">
                 
                 <div className="">
-                <div className="SettingsBox" >
-                    <div className="SettingsBox" onSubmit={handleClick}>
+                    <form className="SettingsBox" onSubmit={handleClick}>
                         <input placeholder="First Name"  ref={firstName} className="" />
                         <input placeholder="Last Name"  ref={lastName} className=""/>
                         <input placeholder="City"  ref={city} className=""/>
@@ -99,7 +98,7 @@ export default function Settings() {
                         <input placeholder="Password Again"  ref={passwordAgain} className="" type="password"/>
                         
                         <button className="button">Submit</button>                    
-                        </div>
+                        </form>
                 </div>
             </div>
         </div>
