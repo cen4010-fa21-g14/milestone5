@@ -19,12 +19,6 @@ export default function Settings() {
     const history = useHistory();
 
     
-    
-
-    
-
-    const handleClick = async (e) => {
-
     const userId = useParams()._id;
     const [ userIdtag, setUser] = useState({});
     useEffect(() =>{
@@ -33,9 +27,15 @@ export default function Settings() {
             setUser(res.data);
 
         }
-        fetchUser();
     });
+    console.log(userIdtag)
+
     
+
+    const handleClick = async (e) => {
+
+    
+
         e.preventDefault();
         if(passwordAgain.current.value !== password.current.value){
             password.current.setCustomValidity("Passwords do not match!  ")
