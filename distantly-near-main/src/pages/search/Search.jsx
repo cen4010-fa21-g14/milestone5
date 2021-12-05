@@ -33,7 +33,8 @@ export default function Search({}) {
     return (
         <>
         <Topbar/>
-        <h4 className="dummyTitle">Please Enter your friends username to add them!</h4>
+        <h4 className="dummyTitle">Please Enter your friends username.</h4>
+        <h4 className="dummyTitle">Click on the their username and/or picture to view their profile and add them as a friend.</h4>
         <div className="Search">
             <input type="text" placeholder="Search for users..." 
             onChange={event => {
