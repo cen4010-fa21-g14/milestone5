@@ -42,3 +42,11 @@ p{
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
 }
+
+.dummyTitle{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+}
