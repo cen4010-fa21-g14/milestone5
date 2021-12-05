@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { axiosInstance } from "../../config";
 import { useHistory } from "react-router"
 import { useEffect,useState } from "react"
+import { useParams } from "react-router";
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
 export default function Settings() {
@@ -27,16 +28,28 @@ export default function Settings() {
     //     fetchUser();
     //     // eslint-disable-next-line react-hooks/exhaustive-deps
     // },[user1]);
-    const usernameTest = useParams().usernameTest;
+    // const usernameTest = useParams().usernameTest;
+
+    // useEffect(() =>{
+    //     const fetchUser = async () =>{
+    //         const res = await axiosInstance.get(`/users?username=${usernameTest}`);
+    //         setUser(res.data);
+
+    //     }
+    //     fetchUser();
+    // },[usernameTest]);
+    const [ userTest, setUser] = useState({});
+    const username = useParams().username;
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?username=${usernameTest}`);
+            const res = await axiosInstance.get(`/users?_id=${usernameTest}`);
             setUser(res.data);
 
         }
         fetchUser();
     },[usernameTest]);
+
 
     const handleClick = async (e) => {
         e.preventDefault();

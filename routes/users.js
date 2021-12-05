@@ -32,6 +32,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+
 //Delete user
 
 router.delete("/:id", async (req,res)=>{
