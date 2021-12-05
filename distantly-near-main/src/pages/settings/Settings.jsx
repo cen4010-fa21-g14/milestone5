@@ -16,41 +16,41 @@ export default function Settings() {
     const lastName = useRef();
     const history = useHistory();
 
-    const [ user1, setUser] = useState({});
+    // const [ user1, setUser] = useState({});
 
-    useEffect(() =>{
-        const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users/${user1}`);
-            setUser(res.data);
+    // useEffect(() =>{
+    //     const fetchUser = async () =>{
+    //         const res = await axiosInstance.get(`/users/${user1}`);
+    //         setUser(res.data);
 
-        }
-        fetchUser();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[user1]);
+    //     }
+    //     fetchUser();
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // },[user1]);
 
-    const handleClick = async (e) => {
-        e.preventDefault();
-        if(passwordAgain.current.value !== password.current.value){
-            password.current.setCustomValidity("Passwords do not match!  ")
-        } else{
-            const user = {
-                username: username.current.value,
-                email: email.current.value,
-                password: password.current.value,
-                city: city.current.value,
-                from: from.current.value,
-                firstName: firstName.current.value,
-                lastName: lastName.current.value,
+    // const handleClick = async (e) => {
+    //     e.preventDefault();
+    //     if(passwordAgain.current.value !== password.current.value){
+    //         password.current.setCustomValidity("Passwords do not match!  ")
+    //     } else{
+    //         const user = {
+    //             username: username.current.value,
+    //             email: email.current.value,
+    //             password: password.current.value,
+    //             city: city.current.value,
+    //             from: from.current.value,
+    //             firstName: firstName.current.value,
+    //             lastName: lastName.current.value,
                 
-            }
-            try{
-                await axiosInstance.put(`/users/${user.username}`);
-                history.push("/login")
-            }catch(err){
-                console.log(err)
-            }
-        }
-      };
+    //         }
+    //         try{
+    //             await axiosInstance.put(`/users/${user.username}`);
+    //             history.push("/login")
+    //         }catch(err){
+    //             console.log(err)
+    //         }
+    //     }
+    //   };
     
     return (
         <div>
