@@ -28,6 +28,8 @@
   
   .settingsDesc {
     font-size: 24px;
+    font-weight: 800;
+    color: #8d6b94;
   }
   
   .settingsBox{
@@ -38,6 +40,7 @@
       display: grid;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
   }
   .button{
     width: 60%;
