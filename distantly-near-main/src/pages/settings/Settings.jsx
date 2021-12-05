@@ -30,7 +30,7 @@ export default function Settings() {
         fetchUser();
     },[userIdtag]);
 
-    console.log(userIdtag)
+    
 
     const handleClick = async (e) => {
         e.preventDefault();
@@ -48,7 +48,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put(`/users/${userIdtag}`);
+                await axiosInstance.put(`/${userIdtag}`);
                 history.push("/login")
             }catch(err){
                 console.log(err)
