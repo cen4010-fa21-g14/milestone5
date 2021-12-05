@@ -35,7 +35,7 @@ function App() {
         <Route path="/search">
           <Search/>
         </Route>
-        <Route path="/settings/:username">
+        <Route path="/settings">
           <Settings/>
         </Route>
         <Route path="/profile/:username">
