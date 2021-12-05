@@ -30,6 +30,9 @@ export default function Topbar() {
                 <Link to={`/profile/${user.username}`} style={{textDecoration:"none", color:"white"}}>
                     <span className="logo2">Profile</span>
                 </Link>
+                <Link to={"/settings/"+ user._id} style={{textDecoration:"none", color:"white"}}>
+                    <span className="logo2">Settings</span>
+                </Link>
                 <span className="logo2" onClick={handleLogout}>{user && "LOGOUT"}</span>
             </div>
             
