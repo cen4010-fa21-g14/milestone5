@@ -20,13 +20,13 @@ export default function Settings() {
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?userId=${post.userId}`);
+            const res = await axiosInstance.get(`/users/${userId}`);
             setUser(res.data);
 
         }
         fetchUser();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[post.userId]);
+    },[userId]);
 
     const handleClick = async (e) => {
         e.preventDefault();
@@ -44,7 +44,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put("/users/"+ user);
+                await axiosInstance.put(`/users/${user.username}`);
                 history.push("/login")
             }catch(err){
                 console.log(err)
