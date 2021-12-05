@@ -52,7 +52,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put("/users/"+ userId,user);
+                await axiosInstance.put("/users/"+ userIdtag,user);
                 history.push("/login")
             }catch(err){
                 console.log(err)
