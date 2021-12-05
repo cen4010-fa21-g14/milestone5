@@ -73,10 +73,37 @@ export default function Rightbar({ user }) {
         </div> */}
           <div className="rightbarFriendList">
           <h4 className="rightbarTitle">Recommended Friends:</h4>
-          {user.user.map((u) => (
-            <Online key={u.id} user={u} />
-            
-          ))}
+          {users.map((val,key)=>{
+                return (
+                <div className="user" key={key}>
+                    <Link
+                        to={"/profile/" + val.username}
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
+                    <div className="rightbarFollowing">
+                    <img
+                    src={
+                        val.profilePicture
+                        ? PF + val.profilePicture
+                        : PF + "person/noAvatar.png"
+                    }
+                    alt=""
+                    className="rightbarFollowingImg"
+                    />
+                    <span className="rightbarFollowingName">{val.username}</span>
+                    </div>
+                    </Link>
+
+
+                    {/* <p>{val.username}</p> */}
+                    {/* <img  alt="" src={val.profilePicture} ></img> */}
+
+
+                    
+                </div>
+                );
+                
+            })}
           
         </div>
         
