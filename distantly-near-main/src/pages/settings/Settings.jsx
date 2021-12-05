@@ -27,6 +27,16 @@ export default function Settings() {
     //     fetchUser();
     //     // eslint-disable-next-line react-hooks/exhaustive-deps
     // },[user1]);
+    const username = useParams().username;
+
+    useEffect(() =>{
+        const fetchUser = async () =>{
+            const res = await axiosInstance.get(`/users?username=${username}`);
+            setUser(res.data);
+
+        }
+        fetchUser();
+    },[username]);
 
     const handleClick = async (e) => {
         e.preventDefault();
@@ -44,7 +54,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put(`/users/${user.username}`);
+                await axiosInstance.put(`/users/${username}`);
                 history.push("/login")
             }catch(err){
                 console.log(err)
