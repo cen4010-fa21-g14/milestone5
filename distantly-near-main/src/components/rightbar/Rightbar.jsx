@@ -120,7 +120,7 @@ export default function Rightbar({ user }) {
                             <Link to="/settings" style={{textDecoration:"none"}}>
 
                             <button className="button" >
-                                Settings
+                                Edit Profile
                               </button>
                             </Link>
         )}
