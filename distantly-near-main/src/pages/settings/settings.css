@@ -1,0 +1,55 @@
+.settings{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF4E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.settingsWrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+  }
+  
+  .settingsLeft,
+  .settingsRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .settingsLogo {
+    font-size: 50px;
+    font-weight: 800;
+    color: #8D6B94;
+    margin-bottom: 10px;
+  }
+  
+  .settingsDesc {
+    font-size: 24px;
+  }
+  
+  .settingsBox{
+      height: 400px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  .button{
+    height: 50px;
+      border-radius: 10px;
+      border: none;
+      background-color: #C3A29E;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      width: 100px;
+    max-width: 100%;
+    padding: 15px;
+  }
