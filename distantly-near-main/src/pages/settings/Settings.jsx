@@ -6,7 +6,7 @@ import { useEffect,useState } from "react"
 import { useParams } from "react-router";
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
-export default function Settings() {
+export default function Settings({ user }) {
     const username = useRef();
     const email = useRef();
     const password = useRef();
@@ -67,7 +67,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put(`/users/`+usernameTest);
+                await axiosInstance.put("/users/" +user._id);
                 history.push("/login")
             }catch(err){
                 console.log(err)

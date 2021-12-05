@@ -117,7 +117,7 @@ export default function Rightbar({ user }) {
     return (
       <>
   {user.username == currentUser.username && (
-                            <Link to="/settings" style={{textDecoration:"none"}}>
+                            <Link to={"/settings/"+ user._id} style={{textDecoration:"none"}}>
 
                             <button className="button" >
                                 Edit Profile
