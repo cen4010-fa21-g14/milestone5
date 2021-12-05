@@ -50,7 +50,7 @@ export default function Settings() {
             }
             try{
                 await axiosInstance.put("/users/" + userParams, userItems);
-                history.push("/")
+                history.push("/login")
             }catch(err){
                 console.log(err)
             }
@@ -74,7 +74,7 @@ export default function Settings() {
                         <input placeholder="First Name"  required ref={firstName} className="" />
                         <input placeholder="Last Name"  required ref={lastName} className=""/>
                         <input placeholder="City"  required ref={city} className=""/>
-                        <input placeholder="From" required ref={from} className=""/>
+                        <input placeholder="State" required ref={from} className=""/>
                         <input placeholder="Email"  required ref={email}className="" type="email"/>
                         <input placeholder="Password" required ref={password} className="" type="password" minLength="6"/>
                         <input placeholder="Password Again"  required ref={passwordAgain} className="" type="password"/>
