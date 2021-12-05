@@ -2,11 +2,13 @@ import React from 'react'
 import { useRef } from "react";
 import { axiosInstance } from "../../config";
 import { useHistory } from "react-router"
-import { useEffect,useState,useContext } from "react"
-import { AuthContext } from "../../context/AuthContext";
-import { useParams } from "react-router";
+import { useEffect,useState } from "react"
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
+import { useParams } from "react-router";
+
+
+
 export default function Settings() {
     const userId = useRef();
     const username = useRef();
@@ -19,29 +21,24 @@ export default function Settings() {
     const lastName = useRef();
     const history = useHistory();
 
-    
+    const [ user, setUser] = useState({});
     const userParams = useParams()._id;
-    const [ userIdtag, setUser] = useState({});
-    useEffect(() =>{
-        const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?userId=${userId}`);
+
+    useEffect(()=>{
+        const fetchUsers = async () =>{
+            const res = await axiosInstance.get("users/"+ userParams );
             setUser(res.data);
-
         }
-    });
-    console.log(userIdtag)
+        fetchUsers();
 
-    
+    },[userParams]);
 
     const handleClick = async (e) => {
-
-    
-
         e.preventDefault();
         if(passwordAgain.current.value !== password.current.value){
             password.current.setCustomValidity("Passwords do not match!  ")
         } else{
-            const user = {
+            const userItems = {
                 userId: userParams,
                 username: username.current.value,
                 email: email.current.value,
@@ -53,8 +50,8 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put("/users/"+ userIdtag,user);
-                history.push("/login")
+                await axiosInstance.put("/users/" + userParams, userItems);
+                history.push("/profile/" + userParams)
             }catch(err){
                 console.log(err)
             }
@@ -74,14 +71,15 @@ export default function Settings() {
                 
                 <div className="">
                     <form className="SettingsBox" onSubmit={handleClick}>
-                        <input placeholder="First Name"  ref={firstName} className="" />
-                        <input placeholder="Last Name"  ref={lastName} className=""/>
-                        <input placeholder="City"  ref={city} className=""/>
-                        <input placeholder="From"  ref={from} className=""/>
-                        <input placeholder="Username"  ref={username} className=""/>
-                        <input placeholder="Email"  ref={email}className="" type="email"/>
-                        <input placeholder="Password"  ref={password} className="" type="password" minLength="6"/>
-                        <input placeholder="Password Again"  ref={passwordAgain} className="" type="password"/>
+                        {/* <input placeholder="User Id"  required ref={userId} className="" /> */}
+                        <input placeholder="First Name"  required ref={firstName} className="" />
+                        <input placeholder="Last Name"  required ref={lastName} className=""/>
+                        <input placeholder="City"  required ref={city} className=""/>
+                        <input placeholder="From" required ref={from} className=""/>
+                        <input placeholder="Username" required ref={username} className=""/>
+                        <input placeholder="Email"  required ref={email}className="" type="email"/>
+                        <input placeholder="Password" required ref={password} className="" type="password" minLength="6"/>
+                        <input placeholder="Password Again"  required ref={passwordAgain} className="" type="password"/>
                         
                         <button className="button">Submit</button>                    
                         </form>
