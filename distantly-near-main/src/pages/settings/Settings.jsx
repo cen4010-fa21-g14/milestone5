@@ -67,7 +67,7 @@ export default function Settings({ user }) {
                 
             }
             try{
-                await axiosInstance.put("/users/" +user._id);
+                await axiosInstance.put("/users/" +usernameTest);
                 history.push("/login")
             }catch(err){
                 console.log(err)
