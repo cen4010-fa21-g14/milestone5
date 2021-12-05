@@ -15,6 +15,18 @@ export default function Settings() {
     const lastName = useRef();
     const history = useHistory();
 
+    const [ user, setUser] = useState({});
+    
+    useEffect(() =>{
+        const fetchUser = async () =>{
+            const res = await axiosInstance.get(`/users?userId=${userId}`);
+            setUser(res.data);
+
+        }
+        fetchUser();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    });
+
     const handleClick = async (e) => {
         e.preventDefault();
         if(passwordAgain.current.value !== password.current.value){
