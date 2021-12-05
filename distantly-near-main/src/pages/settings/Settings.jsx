@@ -7,13 +7,13 @@ export default function Settings() {
             <>
             <Topbar/>
             <div className="settings">
-            <div className="">
+            <div className="settingsWrapper">
                 <div>
                     <h4 className="dummyTitle">Edit your profile informationa and then submit it by clicking the button below!</h4>
                 </div>
                 <div className="">
                     <form className="SettingsBox" >
-                        <input placeholder="Username" className="loginInput" />
+                        <input placeholder="First Name" className="loginInput" />
                         <input placeholder="Email" className="loginInput" type="email"/>
                         <input placeholder="Password" className="loginInput" type="password" minLength="6"/>
                         <input placeholder="Password Again"  className="loginInput" type="password"/>
