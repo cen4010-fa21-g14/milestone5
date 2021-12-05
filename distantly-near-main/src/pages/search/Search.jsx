@@ -66,7 +66,7 @@ export default function Search({}) {
             {users.filter((val)=>{
                 if(searchTerm == ""){
                     return null
-                }else if(val.username.toLowerCase().includes(searchTerm.toLowerCase())){
+                }else if(val.firstName.toLowerCase().includes(searchTerm.toLowerCase())){
                     return val
                 }
             }).map((val,key)=>{
@@ -86,7 +86,7 @@ export default function Search({}) {
                     alt=""
                     className="rightbarFollowingImg"
                     />
-                    <span className="rightbarFollowingName">{val.username}</span>
+                    <span className="rightbarFollowingName">{val.firstName}</span>
                     </div>
                     </Link>
 
