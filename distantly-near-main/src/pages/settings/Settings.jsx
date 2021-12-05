@@ -14,10 +14,10 @@ export default function Settings() {
                 </div>
                 <div className="">
                     <form className="" >
-                        <input placeholder="Username" required ref={username} className="loginInput" />
-                        <input placeholder="Email" required ref={email} className="loginInput" type="email"/>
-                        <input placeholder="Password" required ref={password} className="loginInput" type="password" minLength="6"/>
-                        <input placeholder="Password Again" required ref={passwordAgain} className="loginInput" type="password"/>
+                        <input placeholder="Username" className="loginInput" />
+                        <input placeholder="Email" className="loginInput" type="email"/>
+                        <input placeholder="Password" className="loginInput" type="password" minLength="6"/>
+                        <input placeholder="Password Again"  className="loginInput" type="password"/>
                         <button className="" type="submit">Sign Up</button>
                         <button className="">
                         
