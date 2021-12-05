@@ -71,7 +71,7 @@ export default function Settings() {
             <div className="">
                 
                 <div className="">
-                    <form className="SettingsBox" >
+                    <form className="SettingsBox" onSubmit={handleClick}>
                         <input placeholder="First Name"  ref={firstName} className="" />
                         <input placeholder="Last Name"  ref={lastName} className=""/>
                         <input placeholder="City"  ref={city} className=""/>
