@@ -16,11 +16,11 @@ export default function Settings() {
     const lastName = useRef();
     const history = useHistory();
 
-    const [ user, setUser] = useState({});
+    const [ user1, setUser] = useState({});
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?userId=${user._id}`);
+            const res = await axiosInstance.get(`/users?userId=${user1._id}`);
             setUser(res.data);
 
         }
@@ -44,7 +44,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put("/users/" + user._id);
+                await axiosInstance.put("/users/" + user1._id);
                 history.push(`/profile/${user.username}`)
             }catch(err){
                 console.log(err)
