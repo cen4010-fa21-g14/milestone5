@@ -75,7 +75,6 @@ export default function Settings() {
                         <input placeholder="Last Name"  required ref={lastName} className=""/>
                         <input placeholder="City"  required ref={city} className=""/>
                         <input placeholder="From" required ref={from} className=""/>
-                        <input placeholder="Username" required ref={username} className=""/>
                         <input placeholder="Email"  required ref={email}className="" type="email"/>
                         <input placeholder="Password" required ref={password} className="" type="password" minLength="6"/>
                         <input placeholder="Password Again"  required ref={passwordAgain} className="" type="password"/>
