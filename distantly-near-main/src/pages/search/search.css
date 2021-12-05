@@ -22,8 +22,7 @@ p{
 
 .user{
     text-align: center;
-    border: black ridge 1px;
-    border-radius: 15px;
+    display: table-footer-group;
     margin: 5px;
     width: 15rem;
     padding-left: 10px;
