@@ -19,8 +19,8 @@ export default function Settings() {
     const history = useHistory();
 
     
-    const userId = useParams().userId;
-    const [ userId, setUser] = useState({});
+    const userId = useParams()._id;
+    const [ userIdtag, setUser] = useState({});
     useEffect(() =>{
         const fetchUser = async () =>{
             const res = await axiosInstance.get(`/users?userId=${userId}`);
@@ -28,9 +28,9 @@ export default function Settings() {
 
         }
         fetchUser();
-    },[userId]);
+    },[userIdtag]);
 
-    console.log(userId)
+    console.log(userIdtag)
 
     // const handleClick = async (e) => {
     //     e.preventDefault();
