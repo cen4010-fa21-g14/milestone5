@@ -33,7 +33,7 @@ export default function Search({}) {
     return (
         <>
         <Topbar/>
-        
+        <h4>Please Enter your friends username to add them!</h4>
         <div className="Search">
             <input type="text" placeholder="Search for users..." 
             onChange={event => {
