@@ -1,4 +1,6 @@
 import React from 'react'
+import { useRef } from "react";
+import { useHistory } from "react-router"
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
 export default function Settings() {
@@ -21,10 +23,14 @@ export default function Settings() {
                 username: username.current.value,
                 email: email.current.value,
                 password: password.current.value,
+                city: city.current.value,
+                from: from.current.value,
+                firstName: firstName.current.value,
+                lastName: lastName.current.value,
                 
             }
             try{
-                await axiosInstance.post("/auth/register",user);
+                await axiosInstance.put("/users/" + user._id);
                 history.push(`/profile/${user.username}`)
             }catch(err){
                 console.log(err)
