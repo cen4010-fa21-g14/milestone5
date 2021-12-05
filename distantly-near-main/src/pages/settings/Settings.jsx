@@ -7,7 +7,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useParams } from "react-router";
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
-export default function Settings({ user }) {
+export default function Settings() {
     const username = useRef();
     const email = useRef();
     const password = useRef();
@@ -18,7 +18,7 @@ export default function Settings({ user }) {
     const lastName = useRef();
     const history = useHistory();
 
-    const { userTest1: currentUser, dispatch } = useContext(AuthContext);
+    
 
     // const [ user1, setUser] = useState({});
 
