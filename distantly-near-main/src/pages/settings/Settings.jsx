@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef } from "react";
+import { axiosInstance } from "../../config";
 import { useHistory } from "react-router"
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
