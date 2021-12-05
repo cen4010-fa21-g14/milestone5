@@ -51,7 +51,7 @@ export default function Settings() {
                 
             }
             try{
-                await axiosInstance.put(`/users/${userIdtag}`);
+                await axiosInstance.post("/auth/update",user);
                 history.push("/login")
             }catch(err){
                 console.log(err)

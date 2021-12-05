@@ -30,6 +30,33 @@ router.post("/register",  async (req, res) => {
     }
 });
 
+//UPDATE
+router.post("/update",  async (req, res) => {
+    try{
+        //generate new password
+        // const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hashSync(req.body.password, 10);
+        
+        //create new user
+        const newUser = new User({
+            username: req.body.username,
+            email: req.body.email,
+            firstName :req.body.firstName,
+            lastName :req.body.lastName,
+            city :req.body.city,
+            from :req.body.from,
+            password: hashedPassword,
+    
+        });
+        //save user and respond
+        const user = await newUser.save();
+        res.status(200).json(user);
+    }catch(err){
+        res.status(500).json(err)
+        // console.log(err);
+    }
+});
+
 
 // router.get("/register",  async (req, res) => {
 //     const user =  await new User({
