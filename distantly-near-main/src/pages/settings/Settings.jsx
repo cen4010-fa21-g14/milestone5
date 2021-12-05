@@ -46,7 +46,7 @@ export default function Settings({ userTest1 }) {
 
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?_id=${userTest1._id}`);
+            const res = await axiosInstance.get(`/users?userId=${userTest1._id}`);
             setUser(res.data);
 
         }
