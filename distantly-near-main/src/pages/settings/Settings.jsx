@@ -2,6 +2,7 @@ import React from 'react'
 import { useRef } from "react";
 import { axiosInstance } from "../../config";
 import { useHistory } from "react-router"
+import { useEffect,useState } from "react"
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
 export default function Settings() {
@@ -16,10 +17,10 @@ export default function Settings() {
     const history = useHistory();
 
     const [ user, setUser] = useState({});
-    
+
     useEffect(() =>{
         const fetchUser = async () =>{
-            const res = await axiosInstance.get(`/users?userId=${userId}`);
+            const res = await axiosInstance.get(`/users?userId=${user._id}`);
             setUser(res.data);
 
         }
