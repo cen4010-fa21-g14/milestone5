@@ -8,9 +8,8 @@ export default function Settings() {
             <Topbar/>
             <div className="settings">
             <div className="settingsWrapper">
-                <div className="settingsLeft">
-                    <h3 className="settingsLogo">Distantly-Near</h3>
-                    <span className="settingsDesc">Closer than you think!</span>
+                <div>
+                    <h4 className="dummyTitle">Edit your profile informationa and then submit it by clicking the button below!</h4>
                 </div>
                 <div className="SettingsRight">
                     <form className="SettingsBox" >

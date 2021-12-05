@@ -1,7 +1,6 @@
 .settings{
     width: 100vw;
     height: 100vh;
-    background-color: #FFF4E9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +33,7 @@
   .settingsBox{
       height: 400px;
       padding: 20px;
-      background-color: white;
+      background-color: #FFF4E9;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
@@ -53,3 +52,10 @@
     max-width: 100%;
     padding: 15px;
   }
+  .dummyTitle{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+}
