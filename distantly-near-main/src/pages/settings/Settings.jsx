@@ -62,14 +62,14 @@ export default function Settings() {
             <>
             <Topbar/>
             <div>
-                    <h4 className="dummyTitle">Edit your profile information and then submit it by clicking the button below!</h4>
+                    <h4 className="dummyTitle"></h4>
             </div>
             <div className="settings">
       <div className="settingsWrapper">
         <div className="settingsLeft">
-          <h3 className="settingsLogo">Distantly-Near</h3>
+          <h3 className="settingsLogo"></h3>
           <span className="settingsDesc">
-            Closer than you think!
+          Edit your profile information and then submit it by clicking the button below!
           </span>
         </div>
         <div className="settingsRight">
