@@ -58,18 +58,22 @@ export default function Settings() {
       };
     
     return (
-        <div>
+        
             <>
             <Topbar/>
             <div>
                     <h4 className="dummyTitle">Edit your profile information and then submit it by clicking the button below!</h4>
             </div>
             <div className="settings">
-
-            <div className="settingsWrapper">
-                
-                <div className="settingsRight">
-                    <form className="settingsBox" onSubmit={handleClick}>
+      <div className="settingsWrapper">
+        <div className="settingsLeft">
+          <h3 className="settingsLogo">Distantly-Near</h3>
+          <span className="settingsDesc">
+            Closer than you think!
+          </span>
+        </div>
+        <div className="settingsRight">
+        <form className="settingsBox" onSubmit={handleClick}>
                         {/* <input placeholder="User Id"  required ref={userId} className="" /> */}
                         <input placeholder="First Name"  required ref={firstName} className="" />
                         <input placeholder="Last Name"  required ref={lastName} className=""/>
@@ -83,10 +87,12 @@ export default function Settings() {
                         <br></br>
                         <button className="button">Submit</button>                    
                         </form>
-                </div>
-            </div>
         </div>
+      </div>
+    </div>
+        
            </>
-        </div>
+        
     )
 }
+
