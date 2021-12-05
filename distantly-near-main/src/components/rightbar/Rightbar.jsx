@@ -91,7 +91,7 @@ export default function Rightbar({ user }) {
                     alt=""
                     className="rightbarFollowingImg"
                     />
-                    <span className="rightbarFollowingName">{val.username}</span>
+                    <span className="rightbarFollowingName">{val.firstName}</span>
                     </div>
                     </Link>
 
