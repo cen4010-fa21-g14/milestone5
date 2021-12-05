@@ -8,14 +8,14 @@
 .settingsWrapper {
     width: 70%;
     height: 70%;
-    display: flex;
+    
   }
   
   .settingsLeft,
   .settingsRight {
-    flex: 1;
+    
     display: flex;
-    flex-direction: column;
+    
     justify-content: center;
   }
   
@@ -40,17 +40,16 @@
       justify-content: space-between;
   }
   .button{
-    height: 50px;
+    width: 60%;
+      align-self: center;
+      height: 50px;
       border-radius: 10px;
       border: none;
-      background-color: #C3A29E;
+      background-color: #E8DBC5;
       color: white;
       font-size: 20px;
       font-weight: 500;
       cursor: pointer;
-      
-    max-width: 100%;
-    padding: 15px;
   }
   .dummyTitle{
     justify-content: center;

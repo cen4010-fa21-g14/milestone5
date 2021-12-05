@@ -69,7 +69,7 @@ export default function Settings() {
             <div className="settingsWrapper">
                 
                 <div className="settingsRight">
-                    <form className="SettingsBox" onSubmit={handleClick}>
+                    <form className="settingsBox" onSubmit={handleClick}>
                         {/* <input placeholder="User Id"  required ref={userId} className="" /> */}
                         <input placeholder="First Name"  required ref={firstName} className="" />
                         <input placeholder="Last Name"  required ref={lastName} className=""/>
@@ -78,7 +78,9 @@ export default function Settings() {
                         <input placeholder="Email"  required ref={email}className="" type="email"/>
                         <input placeholder="Password" required ref={password} className="" type="password" minLength="6"/>
                         <input placeholder="Password Again"  required ref={passwordAgain} className="" type="password"/>
-                        
+                        <br></br>
+                        <br></br>
+                        <br></br>
                         <button className="button">Submit</button>                    
                         </form>
                 </div>
