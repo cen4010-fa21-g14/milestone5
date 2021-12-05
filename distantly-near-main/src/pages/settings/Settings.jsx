@@ -8,6 +8,7 @@ import { useParams } from "react-router";
 import Topbar from "../../components/topbar/Topbar";
 import "./settings.css";
 export default function Settings() {
+    const userId = useRef();
     const username = useRef();
     const email = useRef();
     const password = useRef();
@@ -19,7 +20,7 @@ export default function Settings() {
     const history = useHistory();
 
     
-    const userId = useParams()._id;
+    const userParams = useParams()._id;
     const [ userIdtag, setUser] = useState({});
     useEffect(() =>{
         const fetchUser = async () =>{
@@ -41,7 +42,7 @@ export default function Settings() {
             password.current.setCustomValidity("Passwords do not match!  ")
         } else{
             const user = {
-                userId: userIdtag,
+                userId: userParams,
                 username: username.current.value,
                 email: email.current.value,
                 password: password.current.value,
