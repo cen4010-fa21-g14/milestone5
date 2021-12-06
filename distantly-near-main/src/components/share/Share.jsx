@@ -40,7 +40,7 @@ export default function Share() {
             <div className="shareWrapper"></div>
             <div className="shareTop">
                 <img className="shareProfileImg" alt="" src={user.profilePicture ? PF+user.profilePicture : PF+"person/noAvatar.png"}></img>
-                <input className="shareInput" placeholder={"   What's Happening " + user.username + "?"} ref={desc} />
+                <input className="shareInput" placeholder={"   What's Happening " + user.firstName + "?"} ref={desc} />
             </div>
             <hr className="shareHr"/>
             {/* {file && (
