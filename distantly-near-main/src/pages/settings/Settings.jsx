@@ -19,6 +19,7 @@ export default function Settings() {
     const from = useRef();
     const firstName = useRef();
     const lastName = useRef();
+    const desc = useRef();
     const history = useHistory();
 
     const [ user, setUser] = useState({});
@@ -46,6 +47,7 @@ export default function Settings() {
                 from: from.current.value,
                 firstName: firstName.current.value,
                 lastName: lastName.current.value,
+                desc: desc.current.value,
                 
             }
             try{
@@ -77,6 +79,7 @@ export default function Settings() {
                         {/* <input placeholder="User Id"  required ref={userId} className="" /> */}
                         <input placeholder="First Name"  required ref={firstName} className="" />
                         <input placeholder="Last Name"  required ref={lastName} className=""/>
+                        <input placeholder="Status"  required ref={desc} className=""/>
                         <input placeholder="City"  required ref={city} className=""/>
                         <input placeholder="State" required ref={from} className=""/>
                         <input placeholder="Email"  required ref={email}className="" type="email"/>
