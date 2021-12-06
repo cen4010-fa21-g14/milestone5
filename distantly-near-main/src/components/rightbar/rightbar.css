@@ -66,11 +66,7 @@
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: none;
-    border-radius: 10px;
-    background-color: #ff758f;
-    color: black;
-    font-size: 20px;
+ 
   }
   
   .rightbarFollowing{
@@ -88,18 +84,11 @@
   }
 
   .rightbarFollowButton{
-    margin-top: 30px;
-    margin-bottom: 10px;
     border: none;
-    background-color: #1872f2;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
+    border-radius: 10px;
+    background-color: #ff758f;
+    color: black;
+    font-size: 20px;
   }
   
   .rightbarFollowButton:focus{
