@@ -31,9 +31,11 @@
       img-src     'self' data: content:;
       media-src   *;
       script-src * data: https://ssl.gstatic.com/ 'unsafe-inline' 'unsafe-eval';
+      script-src 'nonce-{SERVER-GENERATED-NONCE}'; img-src www.googletagmanager.com;
 
             "
   />
+  
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="images/styles.css">
 
