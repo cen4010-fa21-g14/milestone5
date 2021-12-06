@@ -14,6 +14,6 @@ Node(.js) - the premier JavaScript web serv
 Our site is only available and tested on Chrome,Brave, and Opera.
 Browsers such as Edge and Firefox will not work due.
 
-Front-End Created by: Andres Botia & Ernesto Lopez
-Back-End Created by: Andres Botia & Ernesto Lopez
-Database Managed by: Andres Botia & Ernesto Lopez
+Front-End Created by: Andres Botia & Ernesto Lopez.
+Back-End Created by: Andres Botia & Ernesto Lopez.
+Database Managed by: Andres Botia & Ernesto Lopez.
