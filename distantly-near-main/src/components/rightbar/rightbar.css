@@ -84,13 +84,21 @@
   }
 
   .rightbarFollowButton{
+    margin-top: 30px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 10px;
     background-color: #ff758f;
     color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
     font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
   }
-  
+
   .rightbarFollowButton:focus{
     outline: none;
   }
