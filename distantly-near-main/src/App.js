@@ -33,13 +33,13 @@ function App() {
           {user ? <Redirect to="/"/> : <Register />}
         </Route>
         <Route path="/search">
-          <Search/>
+        {user ? <Search/> : <Login/>}
         </Route>
         <Route path="/settings/:_id">
-          <Settings/>
+        {user ? <Settings/> : <Login/>}
         </Route>
         <Route path="/profile/:username">
-          <Profile/>
+        {user ? <Profile/> : <Login/>}
         </Route>
       </Switch>
     </Router>
