@@ -1,7 +1,7 @@
 .login {
     width: 100vw;
     height: 100vh;
-    background-color: #FFF4E9;
+    background-color: #c9184a ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +58,7 @@
       height: 50px;
       border-radius: 10px;
       border: none;
-      background-color: #C3A29E;
+      background-color: #ff758f;
       color: white;
       font-size: 20px;
       font-weight: 500;
@@ -76,7 +76,7 @@
       height: 50px;
       border-radius: 10px;
       border: none;
-      background-color: #E8DBC5;
+      background-color: #ff758f;
       color: white;
       font-size: 20px;
       font-weight: 500;

@@ -35,7 +35,7 @@
   .settingsBox{
       height: 400px;
       padding: 20px;
-      background-color: #FFF4E9;
+      background-color: #c9184a ;
       border-radius: 10px;
       display: grid;
       flex-direction: column;
@@ -48,7 +48,7 @@
       height: 50px;
       border-radius: 10px;
       border: none;
-      background-color: #c3a29e;
+      background-color: #ff758f ;
       color: white;
       font-size: 20px;
       font-weight: 500;
