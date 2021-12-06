@@ -1,4 +1,4 @@
-# Distantly-Near Milestone5
+# Milestone5
 
 ## Hello Welcome To **Distantly-Near** GitHub Repository.
 
